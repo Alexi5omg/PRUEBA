@@ -1,0 +1,241 @@
+\subsection{EPR}%\label{subsec:dinamica}
+
+EPR pone en discusión dos preguntas:
+\begin{gather}
+	\text{¿La teoría de la Mecánica Cuántica es correcta?}
+	\label{qst:es_correcta}
+	\\
+	\text{¿Es completa la descripción que da la teoría de la Mecánica Cuántica?}
+	\label{qst:completitud}
+\end{gather}
+
+entendiendo que "completa" es que: cada elemento de la realidad debe de tener una contraparte en la teoría física. \cite{EPR}
+
+Ellos ponen en mesa que la corrección de una teoría se juzga por el grado de concordancia entre las conclusiones de esa teoría y la experiencia humana; en la física, esa experiencia humana toma la forma de experimento y medición. Es así como en lugar de tratar de ver si es correcta o no la Mecánica Cuántica (responder \ref{qst:es_correcta}), se discutió sobre si se respeta la completitud de esa teoría (\ref{qst:completitud}).
+
+Por otro lado, definieron como "realidad" a aquello que: si, sin perturbar en absoluto el sistema, podemos predecir con certeza (i.e., probabilidad igual a $1$) el valor de una magnitud física, entonces existe un elemento de la realidad física correspondiente a esta magnitud física. \cite{EPR}
+
+Y es así como tras pequeña descripción matemática con el uso de operadores (observables) de posición y momento, y una función de onda de dos partículas, demostraron que o
+\begin{equation}
+	\text{\parbox{0.85\linewidth}{\centering la descripción de la mecánica cuántica de la realidad dada por la función de onda no es completa}}
+	\label{qst:incompletitud}
+\end{equation}
+o bien
+\begin{equation}
+	\text{\parbox{0.85\linewidth}{\centering cuando los operadores correspondientes a dos magnitudes físicas no conmutan, las dos magnitudes no pueden tener realidad simultánea. \cite{EPR}}}
+	\label{qst:no_real_simul}
+\end{equation}
+Entonces, partiendo de la suposición de que la función de onda sí proporciona una descripción completa de la realidad física, se llega a la conclusión de que dos cantidades físicas, con operadores que no conmutan, pueden tener una realidad simultánea; por tanto, la negación de \ref{qst:incompletitud} lleva a la negación de la única otra alternativa, \ref{qst:no_real_simul}.
+
+Dado que la demostración original en EPR de esto último contempla variables continuas, recuperemos una reformulación de este experimento que contempla variables discretas \cite{Apuntes}: el espín en un estado singlete, ya que es como lo manejó Bell (que discutiremos más adelante):
+
+Consideremos un sistema de dos partículas de espín $\frac{1}{2}$, preparadas inicialmente en un estado entrelazado en particular: el estado singlete
+
+$$ |\psi\rangle_{12} = \frac{1}{\sqrt{2}} ( |\uparrow_z\rangle_1 |\downarrow_z\rangle_2 - |\downarrow_z\rangle_1 |\uparrow_z\rangle_2 ), $$
+las partículas se separan espacialmente, de modo que la partícula 1 es enviada a Alice y la partícula 2 a Bob.
+
+\textbf{(i)} Alice elige medir una componente del espín de su partícula, por ejemplo $S_z^{(1)}$.
+\begin{gather*}
+	\text{Si la medición de Alice resulta en } S_z^{(1)} = +\frac{\hbar}{2} \Rightarrow \text{el estado de Bob es } |\downarrow_z\rangle_2
+	\\
+	\text{y si Alice mide } S_z^{(1)} = -\frac{\hbar}{2} \Rightarrow \text{el estado de Bob es } |\uparrow_z\rangle_2.
+\end{gather*}
+
+\textbf{(ii)} Alternativamente, Alice puede elegir medir otra componente, por ejemplo $S_x^{(1)}$.
+\begin{gather*}
+	\text{Si la medición de Alice resulta en } S_x^{(1)} = +\frac{\hbar}{2} \Rightarrow \text{el estado de Bob es } |\downarrow_x\rangle_2
+	\\
+	\text{y si Alice mide } S_x^{(1)} = -\frac{\hbar}{2} \Rightarrow \text{el estado de Bob es } |\uparrow_x\rangle_2.
+\end{gather*}
+
+\textbf{(iii)} Sin embargo, los operadores correspondientes a las componentes $x$ y $z$ del espín de Bob no conmutan:
+\begin{equation}
+	[S_x^{(2)},S_z^{(2)}] = -i\hbar S_y^{(2)} \neq 0
+	\label{eq:contradiccion}
+\end{equation}
+
+Por lo tanto, bajo el criterio de realidad de EPR, y suponiendo que la medición realizada por Alice no perturba físicamente a la partícula de Bob, ambas componentes del espín deberían corresponder a elementos de realidad física, pues Alice puede elegir cuál predecir con certeza. Sin embargo, la Mecánica Cuántica no permite representarlas simultáneamente mediante valores definidos en un mismo estado cuántico.  \cite{Apuntes} Por ello, EPR concluye que la descripción proporcionada por la función de onda es incompleta. \cite{EPR}
+%
+%
+%
+%
+\subsection{Desigualdades de Bell}%\label{subsec:dinamica}
+J. Bell, en 1964, demostró que cualquier teoría que trate las partículas bajo la suposición del "realismo local" es incompatible con las predicciones de la Mecánica Cuántica. Recuperemos el enfoque gráfico de la deducción de las desigualdades de Bell de Krzystof Reblias, ya que la demostración origial utiliza la premisa de realismo local como una estructura matemática específica en lugar de un paso lógico en la derivación, lo que puede ser dificíl de entender. \cite{Rebilas}
+
+Primero, tomemos en cuenta que la combinación de las siguientes asunciones es lo que denominaremos como realismo local: se considera que ciertas partículas poseen ciertas propiedades, descritas por la llamada "variable oculta" $\lambda$, que determinan de manera única los resultados $A$ y $B$, independiente de qué medición se realice realmente. Mientras, la asunción del localismo significa que el resultado de $A$ logrado por Alice no depende de los ajustes de medición elegidos por Bob entre las dos posibilidades, $\{b, b'\}$, y de manera similar, el resultado $B$ obtenido por Bob no está influenciado por los ajustes del aparato de Alice, $\{a, a'\}$. \cite{Rebilas}
+
+Consideremos nuevamente un experimento con dos partículas entrelazadas, donde Alice puede elegir entre dos direcciones de medición, $a$ y $c$, mientras que Bob puede elegir entre $b$ y $c$, y los resultados posibles de sus mediciones serán $A=\pm1$ y $B=\pm1$, respectivamente.
+
+De la suposición de localidad, se sigue que para el mismo par exacto de partículas
+\begin{gather*}
+	A(a,b)=A(a,c)=A(a),
+	\\
+	B(b,a)=B(b,c)=B(b).
+\end{gather*}
+donde $A(a,b)$ denota el resultado $A$ que sería registrado por Alice si su configuración fuera $a$ mientras que la de Bob es $b$. Análogamente con $B(b,a)$. Ahora bien, dado que estamos considerando partículas en el estado singlete, sabemos que sus resultados son perfectamente opuestos cuando Alice y Bob miden en la misma dirección. Por lo tanto,
+$$ A(c)=-B(c), $$
+lo que implica que no puede existir un par de partículas para el cual ambos obtengan $-1$ al medir en la dirección $c$.
+
+Bajo estas suposiciones, para cada par de partículas podemos asignar resultados a las cuatro combinaciones posibles de direcciones, aun cuando solamente una de ellas sea medida experimentalmente. Esta es la idea detrás de la representación gráfica de Rębilas: cada par de partículas queda representado por un rectángulo cuyos cuatro vértices son los que corresponden a los resultados que se obtendrían para las diferentes elecciones de medición.
+
+\begin{figure}%[H]
+	\centering
+	\includegraphics[scale=01]{figs/grafica.png}
+	\caption{Las configuraciones de medición y las cajas marcadas con X para las derivaciones de la desigualdad de Bell. \cite{Rebilas}}
+	\label{fig:graf}
+\end{figure}
+
+Utilizando la representación de la Figura \ref{fig:graf}, consideremos el conjunto de pares de partículas que producirían los resultados $A(a)=+1$ y $B(b)=+1$, que denotaremos por $\{a^+,b^+\}$. Como se observa en la gráfica, cualquier par que pertenezca a este conjunto necesariamente debe pertenecer también a alguno de los conjuntos $\{a^+,c^+\}$ o $\{c^+,b^+\}$. Esto se debe a que la posibilidad $\{c^-,c^-\}$ está excluida por la anticorrelación del estado singlete.
+
+Si $n(a^+,b^+)$ representa el número de pares que producirían los resultados $\{a^+,b^+\}$, entonces no es mayor que la suma de los números pares de los conjuntos mencionados anteriormente
+\begin{equation}
+	n(a^+,b^+) \leq n(a^+,c^+) + n(c^+,b^+).
+	\label{eq:des_1}
+\end{equation}
+
+De manera análoga, si intercambiamos los signos de los resultados, obtenemos
+\begin{equation}
+	n(a^-,b^-) \leq n(a^-,c^-) + n(c^-,b^-).
+	\label{eq:des_2}
+\end{equation}
+
+Sumando las Ecuaciones \ref{eq:des_1} y \ref{eq:des_2},
+\begin{equation}
+	n(a^+,b^+)+n(a^-,b^-)
+	\leq n(a^+,c^+)+n(a^-,c^-)+n(c^+,b^+)+n(c^-,b^-).
+	\label{eq:des_3}
+\end{equation}
+
+Ahora, para simplificar la notación, definamos $n_{=}(a,b)$ como el número de pares para los cuales Alice y Bob obtendrían resultados iguales al medir en las direcciones $a$ y $b$: $n_{=}(a,b)=n(a^+,b^+)+n(a^-,b^-)$. De esta manera, la Ecuación \ref{eq:des_3} puede escribirse como
+\begin{equation}
+	n_{=}(a,b)\leq n_{=}(a,c)+n_{=}(c,b).
+	\label{eq:des_4}
+\end{equation}
+
+Por otro lado, debido a las anticorrelaciones perfectas del estado singlete, bajo la suposición de realismo local podemos asignar a cada par de partículas resultados que satisfacen
+\begin{gather*}
+	A(b)=-B(b),
+	\\
+	A(c)=-B(c).
+\end{gather*}
+lo implica que las condiciones $A(c)=B(b)$ y $A(b)=B(c)$ son equivalentes. Es decir, los pares que producirían resultados iguales para las direcciones $(c,b)$ son precisamente los mismos que producirían resultados iguales para $(b,c)$. Por lo tanto, $n_{=}(c,b)=n_{=}(b,c)$.
+
+Sustituyendo esta igualdad en la Ecuación \ref{eq:des_4} y reorganizando los términos, obtenemos
+\begin{equation}
+	n_{=}(a,b)-n_{=}(a,c)\leq n_{=}(b,c).
+	\label{eq:des_5}
+\end{equation}
+
+Ahora, repitiendo el mismo procedimiento gráfico, pero intercambiando las direcciones $b$ y $c$, obtenemos
+\begin{gather*}
+	n(a^+,c^+) \leq n(a^+,b^+) + n(b^+,c^+),
+	\\
+	n(a^-,c^-) \leq n(a^-,b^-) + n(b^-,c^-).
+\end{gather*}
+Sumando ambas expresiones,
+\begin{align*}
+	n(a^+,c^+)+n(a^-,c^-)
+	\leq n(a^+,b^+)+n(a^-,b^-) +n(b^+,c^+)+n(b^-,c^-)
+\end{align*}
+utilizando la definición de $n_{=}$ y reorganizando los términos,
+\begin{equation}
+	n_{=}(a,c)-n_{=}(a,b)\leq n_{=}(b,c).
+	\label{eq:des_6}
+\end{equation}
+
+Observemos que las Ecuaciones \ref{eq:des_5} y \ref{eq:des_6} establecen que tanto la diferencia $n_{=}(a,b)-n_{=}(a,c)$ como su negativa están acotadas superiormente por $n_{=}(b,c)$. Por lo tanto, podemos combinarlas mediante un valor absoluto:
+\begin{equation}
+	|n_{=}(a,b)-n_{=}(a,c)|\leq n_{=}(b,c).
+	\label{eq:des_7}
+\end{equation}
+
+Para expresar este resultado en términos de probabilidades, consideremos un conjunto de $N$ pares de partículas, preparados bajo las mismas condiciones, y definamos
+$$ P_{=}(a,b)=\frac{n_{=}(a,b)}{N}, $$
+donde $P_{=}(a,b)$ representa la probabilidad de obtener resultados iguales al medir en las direcciones $a$ y $b$.
+
+Dividiendo la Ecuación \ref{eq:des_7} entre $N$, obtenemos \cite{material}
+\begin{gather}
+	|P_{=}(a,b)-P_{=}(a,c)|\leq P_{=}(b,c).
+	\label{eq:des_proba}
+\end{gather}
+
+Finalmente, introduzcamos la función de correlación $C(a,b)$, definida como el valor esperado del producto de los resultados obtenidos por Alice y Bob:
+$$ C(a,b)=\langle A(a)B(b)\rangle. $$
+
+Como los posibles resultados de las mediciones son $A,B=\pm1$, tenemos cuatro combinaciones posibles, donde el producto $AB$ es positivo cuando los resultados son iguales y negativo cuando son diferentes. De esta manera,
+\begin{align*}
+	C(a,b)=&(+1)P(a^+,b^+)+(+1)P(a^-,b^-)+(-1)P(a^+,b^-)+(-1)P(a^-,b^+)
+	\\
+	=&P(a^+,b^+)+P(a^-,b^-)-P(a^+,b^-)-P(a^-,b^+).
+\end{align*}
+
+Utilizando la notación que introdujimos, $P_{=}(a,b)=P(a^+,b^+)+P(a^-,b^-)$, análogamente con $P_{\neq}(a,b)=P(a^+,b^-)+P(a^-,b^+)$ como la probabilidad de obtener resultados diferentes, la correlación puede escribirse como
+\begin{equation}
+	C(a,b)=P_{=}(a,b)-P_{\neq}(a,b).
+	\label{eq:correlacion}
+\end{equation}
+
+Ahora bien, debido a que los resultados solamente pueden ser iguales o diferentes, estas probabilidades satisfacen la condición
+\begin{align*}
+	P_{=}(a,b)+P_{\neq}(a,b)=&1
+	\\
+	P_{\neq}(a,b)=&1-P_{=}(a,b)
+\end{align*}
+sustituyendo esta expresión en la Ecuación \ref{eq:correlacion},
+\begin{align*}
+	C(a,b)&=P_{=}(a,b)-[1-P_{=}(a,b)]
+	\\
+	&=2P_{=}(a,b)-1.
+\end{align*}
+despejando la probabilidad de obtener resultados iguales,
+\begin{equation}
+	P_{=}(a,b)=\frac{1+C(a,b)}{2}.
+	\label{eq:correlacion_probabilidad}
+\end{equation}
+
+Esta relación también es válida para las combinaciones de direcciones $(a,c)$ y $(b,c)$. Por lo tanto, al sustituir la Ecuación \ref{eq:correlacion_probabilidad} en la Ecuación \ref{eq:des_proba}, obtenemos
+\begin{align*}
+	\left|\frac{1+C(a,b)}{2}-\frac{1+C(a,c)}{2}\right|\leq&\frac{1+C(b,c)}{2}
+	\\
+	\left|\frac{C(a,b)-C(a,c)}{2}\right|\leq&\frac{1+C(b,c)}{2}
+\end{align*}
+
+Finalmente,
+\begin{equation}
+	|C(a,b)-C(a,c)|\leq 1+C(b,c).
+	\label{eq:des_bell}
+\end{equation}
+que es la desigualdad de Bell deseada. \cite{Bell}
+%
+%
+%
+%
+\subsection{Violación a la desigualdad de Bell}%\label{subsec:dinamica}
+
+Para comprobar si la Mecánica Cuántica satisface esta desigualdad, recuperemos su predicción para el estado singlete que introdujimos anteriormente. Si Alice y Bob miden las componentes del espín de sus respectivas partículas en las direcciones  $a$ y $b$, la correlación cuántica se calcula mediante el valor esperado del producto de los operadores de Pauli correspondientes:
+\begin{equation}
+	C_{\text{MC}}(a,b)=\langle\psi|(\vec{\sigma}_1\cdot\hat{a})\otimes(\vec{\sigma}_2\cdot\hat{b})|\psi\rangle=-\hat{a}\cdot\hat{b}=-\cos\theta_{ab},
+	\label{eq:correlacion_MC}
+\end{equation}
+donde $\theta_{ab}$ es el ángulo entre ambas direcciones de medición y $\vec{\sigma}_1$, $\vec{\sigma}_2$ representan los vectores de matrices de Pauli de cada partícula.
+
+Ahora, consideremos tres direcciones coplanares $a$, $b$ y $c$, tales que
+$$ \theta_{ab}=60^\circ,\qquad \theta_{ac}=120^\circ,\qquad \theta_{bc}=60^\circ. $$
+
+Utilizando la Ecuación \ref{eq:correlacion_MC}, obtenemos
+\begin{align*}
+	C_{\text{MC}}(a,b)=&-\cos60^\circ=-\frac{1}{2},
+	\\
+	C_{\text{MC}}(a,c)=&-\cos120^\circ=\frac{1}{2},
+	\\
+	C_{\text{MC}}(b,c)=&-\cos60^\circ=-\frac{1}{2}.
+\end{align*}
+
+Sustituyendo estas correlaciones en la desigualdad de Bell, Ecuación \ref{eq:des_bell},
+\begin{align*}
+	\left|-\frac{1}{2}-\frac{1}{2}\right|\leq&1-\frac{1}{2}
+	\\
+	1\leq&\frac{1}{2}.
+\end{align*}
+
+Esta última expresión es evidentemente falsa. Por lo tanto, las correlaciones predichas por la Mecánica Cuántica para el estado singlete violan la desigualdad de Bell, mostrando que no pueden ser reproducidas por una teoría de variables ocultas locales que satisfaga las suposiciones utilizadas en su deducción.

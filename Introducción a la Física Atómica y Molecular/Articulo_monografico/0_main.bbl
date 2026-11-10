@@ -1,0 +1,44 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Einstein et~al.(1935)Einstein, Podolsky, and Rosen]{EPR}
+A.~Einstein, B.~Podolsky, and N.~Rosen.
+\newblock Can quantum-mechanical description of physical reality be considered
+  complete?
+\newblock \emph{Phys. Rev.}, 47:\penalty0 777--780, May 1935.
+\newblock \doi{10.1103/PhysRev.47.777}.
+
+\bibitem[Rębilas(2025{\natexlab{a}})]{Rebilas}
+Krzysztof Rębilas.
+\newblock Graphical approach to {Bell}'s inequalities.
+\newblock \emph{American Journal of Physics}, 93\penalty0 (3):\penalty0
+  260--263, Mar 2025{\natexlab{a}}.
+\newblock \doi{10.1119/5.0250670}.
+
+\bibitem[U'Ren~Cortés(2026)]{Apuntes}
+Alfred~Barry U'Ren~Cortés.
+\newblock Introducción a la Óptica cuántica.
+\newblock Curso 2026-2, Facultad de Ciencias, Universidad Nacional Autónoma de
+  México, 2026.
+\newblock Apuntes personales de clase; curso impartido por Alfred Barry U'Ren
+  Cortés, Instituto de Ciencias Nucleares, UNAM.
+
+\bibitem[Rębilas(2025{\natexlab{b}})]{material}
+Krzysztof Rębilas.
+\newblock Supplementary material for ``graphical approach to {Bell}'s
+  inequalities''.
+\newblock Supplementary material, American Journal of Physics,
+  2025{\natexlab{b}}.
+\newblock Supplementary material associated with American Journal of Physics,
+  vol. 93, no. 3, pp. 260--263.
+
+\bibitem[Bell(1964)]{Bell}
+J.~S. Bell.
+\newblock On the einstein podolsky rosen paradox.
+\newblock \emph{Physics}, 1:\penalty0 195--200, 1964.
+
+\end{thebibliography}

@@ -1,0 +1,19 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Shankar(1994)]{Shankar-book1994}
+R.~Shankar.
+\newblock \emph{Principles of Quantum Mechanics}.
+\newblock Springer, 1994.
+
+\bibitem[Pauli(1940)]{Pauli-pr58}
+W.~Pauli.
+\newblock The connection between spin and statistics.
+\newblock \emph{Phys. Rev.}, 58:\penalty0 716--722, Oct 1940.
+\newblock \doi{10.1103/PhysRev.58.716}.
+
+\end{thebibliography}
